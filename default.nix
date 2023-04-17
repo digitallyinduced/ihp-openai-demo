@@ -1,7 +1,7 @@
 let
     ihp = builtins.fetchGit {
         url = "https://github.com/digitallyinduced/ihp.git";
-        ref = "refs/heads/openai";
+        rev = "edd8333f7e090f7ae50f4cc01c9c1e249d075d8e";
     };
     haskellEnv = import "${ihp}/NixSupport/default.nix" {
         ihp = ihp;
