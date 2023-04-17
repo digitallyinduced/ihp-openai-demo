@@ -1,7 +1,7 @@
 let
     ihp = builtins.fetchGit {
         url = "https://github.com/digitallyinduced/ihp.git";
-        rev = "refs/tags/v1.0.1";
+        rev = "f1ffc9557df5f7bb79f0e5c65c1551556b8b8ed0";
     };
     haskellEnv = import "${ihp}/NixSupport/default.nix" {
         ihp = ihp;
@@ -12,6 +12,7 @@ let
             text
             hlint
             p.ihp
+            ihp-openai
         ];
         otherDeps = p: with p; [
             # Native dependencies, e.g. imagemagick

@@ -6,5 +6,9 @@ import Generated.Types
 
 data WebApplication = WebApplication deriving (Eq, Show)
 
-
-data StaticController = WelcomeAction deriving (Eq, Show, Data)
+data QuestionsController
+    = QuestionsAction
+    | NewQuestionAction
+    | CreateQuestionAction
+    | DeleteQuestionAction { questionId :: !(Id Question) }
+    deriving (Eq, Show, Data)
